@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddle 1</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css">
+
+  <script src="https://kit.fontawesome.com/8bed0ad5bd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="main--wrapper">
+    <h1 class="matrix">Riddle 1<span class="matrix--flash"></span>
+    </h1>
+
+    <div class="riddle--wrapper">
+      <p>I speak without a mouth and hear without ears.<br /> I have no body, but I come alive with the wind. <br />What
+        am I?</p>
+    </div>
+
+    <div>
+      <h3>Answer:</h3>
+
+      <!-- SCOOP - HTML Form, Input, Button -->
+      <form id="riddle-form" class="answer--form">
+        <input type="text" id="answer" placeholder="Your answer here..." required class="input--text" />
+        <button type="submit" class="btn--main">Submit</button>
+      </form>
+
+      <p id="error-message" style="color: red; display: none; margin-top: 4px;">Wrong answer! Try again.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a class="footer--icon" target="_blank" href="https://github.com/ThomasJPrice/swirl">
+      <i class="fa-brands fa-github"></i>
+    </a>
+
+    <p>Made for <a target="_blank" href="https://swirl.hackclub.com/">Swirl</a></p>
+  </footer>
+
+</body>
+
+<script>
+  document.getElementById("riddle-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let userAnswer = document.getElementById("answer").value.trim().toLowerCase(); 
+    let correctAnswer = "echo"; 
+
+    if (userAnswer === correctAnswer) {
+      window.location.href = "puzzle-echo.html";
+    } else {
+      document.getElementById("error-message").style.display = "block";
+    }
+  });
+</script>
+
+</html>
