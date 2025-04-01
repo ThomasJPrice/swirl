@@ -141,3 +141,10 @@ h3 {
   max-width: 600px;
   margin: 0 auto;
 }
+
+.dino--img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 32px auto 0 auto;
+}
